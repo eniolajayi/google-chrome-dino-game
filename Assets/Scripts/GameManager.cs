@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        gameSpeed += gameSpeedIncrease + Time.deltaTime;
+        gameSpeed += gameSpeedIncrease * Time.deltaTime;
     }
 }
 
