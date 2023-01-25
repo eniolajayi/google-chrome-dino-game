@@ -17,6 +17,11 @@ public class AnimatedSprite : MonoBehaviour
         Invoke(nameof(Animate), 0f);
     }
 
+    private void OnDisable()
+    {
+        CancelInvoke();
+    }
+
     private void Animate()
     {
         frame++;
