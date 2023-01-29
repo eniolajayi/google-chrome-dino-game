@@ -282,6 +282,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ccea4997e6ba74395381e812c02895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objects:
+  - prefab: {fileID: 6674742333822813902, guid: a1943c7f98b91bd42a454822aba27014, type: 3}
+    spawnChance: 0.2
+  - prefab: {fileID: 4359910914721984194, guid: 98f9a24e35849d445ae7944589cafe54, type: 3}
+    spawnChance: 0.18
+  - prefab: {fileID: 1228645305224879009, guid: 94b3511613acdf14ba92bc4ed6aac5b2, type: 3}
+    spawnChance: 0.16
+  - prefab: {fileID: 5225192175399677691, guid: 5d7b69707dec0db41a6e8359746054d8, type: 3}
+    spawnChance: 0.14
+  - prefab: {fileID: 287273435503029604, guid: 89f614dd5ccd6834db1b5d86d4d8a887, type: 3}
+    spawnChance: 0.12
+  - prefab: {fileID: 972580897424881009, guid: b08cb44241230514cb8c74d78ba83402, type: 3}
+    spawnChance: 0.1
+  - prefab: {fileID: 6325625116595485761, guid: ae420db7554f35747947c9424112ffac, type: 3}
+    spawnChance: 0.05
 --- !u!4 &1113781525
 Transform:
   m_ObjectHideFlags: 0

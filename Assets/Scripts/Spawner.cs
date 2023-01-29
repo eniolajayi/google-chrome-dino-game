@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    [System.Serializable]
     public struct SpawnableObject
     {
         public GameObject prefab;
