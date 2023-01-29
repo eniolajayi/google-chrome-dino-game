@@ -297,6 +297,8 @@ MonoBehaviour:
     spawnChance: 0.1
   - prefab: {fileID: 6325625116595485761, guid: ae420db7554f35747947c9424112ffac, type: 3}
     spawnChance: 0.05
+  minSpawnRate: 1
+  maxSpawnRate: 1.5
 --- !u!4 &1113781525
 Transform:
   m_ObjectHideFlags: 0
