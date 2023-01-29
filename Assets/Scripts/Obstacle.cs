@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
     }
     private void Update()
     {
-        transform.position = Vector3.left * GameManager.Instance.gameSpeed * Time.deltaTime;
+        transform.position += Vector3.left * GameManager.Instance.gameSpeed * Time.deltaTime;
 
         if (transform.position.x < leftEdge)
         {
