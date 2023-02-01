@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 26205077}
   - component: {fileID: 26205076}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Retry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
