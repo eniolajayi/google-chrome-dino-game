@@ -13,8 +13,14 @@ public class GameManager : MonoBehaviour
     private Player player;
     private Spawner spawner;
 
+    private float score;
+
+
     public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highScoreText;
     public Button retryButton;
+
 
 
     private void Awake()
@@ -77,6 +83,8 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
+        score += gameSpeed * Time.deltaTime;
+        scoreText.text = Mathf.FloorToInt(score).ToString("D5");
     }
 }
 
