@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
         }
 
         gameSpeed = initialGameSpeed;
+        score = 0f;
         enabled = true;
 
         player.gameObject.SetActive(true);
@@ -66,6 +67,8 @@ public class GameManager : MonoBehaviour
 
         gameOverText.gameObject.SetActive(false);
         retryButton.gameObject.SetActive(false);
+
+        UpdateHighscore();
     }
 
     public void GameOver()
@@ -78,6 +81,8 @@ public class GameManager : MonoBehaviour
 
         gameOverText.gameObject.SetActive(true);
         retryButton.gameObject.SetActive(true);
+
+        UpdateHighscore();
     }
 
     private void Update()
@@ -85,6 +90,19 @@ public class GameManager : MonoBehaviour
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
         score += gameSpeed * Time.deltaTime;
         scoreText.text = Mathf.FloorToInt(score).ToString("D5");
+    }
+
+    private void UpdateHighscore()
+    {
+        float highscore = PlayerPrefs.GetFloat("highscore", 0);
+
+        if (score > highscore)
+        {
+            highscore = score;
+            PlayerPrefs.SetFloat("highscore", highscore);
+        }
+
+        highScoreText.text = Mathf.FloorToInt(highscore).ToString("D5");
     }
 }
 
