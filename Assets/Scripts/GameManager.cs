@@ -1,4 +1,6 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     private Player player;
     private Spawner spawner;
+
+    public TextMeshProUGUI gameOverText;
+    public Button retryButton;
 
 
     private void Awake()
@@ -52,6 +57,9 @@ public class GameManager : MonoBehaviour
 
         player.gameObject.SetActive(true);
         spawner.gameObject.SetActive(true);
+
+        gameOverText.gameObject.SetActive(false);
+        retryButton.gameObject.SetActive(false);
     }
 
     public void GameOver()
@@ -61,6 +69,9 @@ public class GameManager : MonoBehaviour
 
         player.gameObject.SetActive(false);
         spawner.gameObject.SetActive(false);
+
+        gameOverText.gameObject.SetActive(true);
+        retryButton.gameObject.SetActive(true);
     }
 
     private void Update()
