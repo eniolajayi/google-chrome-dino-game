@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         NewGame();
     }
 
-    private void NewGame()
+    public void NewGame()
     {
         Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
         foreach (Obstacle obstacle in obstacles)
